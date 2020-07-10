@@ -1,0 +1,219 @@
+body {
+	font-family: 'Lato';
+}
+
+
+
+.panel.integration-card{
+	border: 1px solid #CCC;
+}
+
+.integration-card-status{
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.integration-card-img{
+	margin-bottom: 20px;
+    min-height: 120px;
+	max-height: 120px;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.integration-card-txt{
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+
+.integration-card{
+	padding: 5px 30px 20px 30px;
+}
+
+.integration-body{
+	padding: 2px;
+}
+
+.integration-body p{
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.integration-body button{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+.integration-status-span{
+	border: 1px solid #FFF;
+    border-radius: 22px;
+    width: 22px;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.integration-connected{
+	background: #47b972;
+	color: #FFF;
+	box-shadow: 0px 0px 3px 2px #47b972, 0 0px 3px 2px #47b972;
+	border: #47b972;
+}
+
+.integration-disconnected{
+    background: #d9534f;
+    color: #FFF;
+    box-shadow: 0px 0px 3px 2px #d9534f, 0 0px 3px 2px #d9534f;
+    border: #d9534f;
+}
+
+/* .btn.btn-danger {
+    color: #d9534f !important;
+    background-color: transparent !important;
+    border-color: #d9534f !important;
+}
+
+.btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active {
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    color: #FFF !important;
+    background-color: #d9534f !important;
+}
+
+.btn.btn-info {
+    color: #5bc0de !important;
+    background-color: transparent !important;
+    border-color: #5bc0de !important;
+}
+
+.btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info.active {
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    color: #FFF !important;
+    background-color: #5bc0de !important;
+}
+
+.btn.btn-success {
+    color: #4cae4c !important;
+    background-color: transparent !important;
+    border-color: #4cae4c !important;
+}
+
+.btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success.active {
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    color: #FFF !important;
+    background-color: #4cae4c !important;
+} */
+
+.apptools .header {
+    border-color: #fe8004;
+}
+
+.apptools .footer {
+    border-color: #fe8004;
+}
+
+.appdocs .header {
+    border-color: #1ab95a;
+}
+
+.appdocs .footer {
+    border-color: #1ab95a;
+}
+
+.appinvoice .header {
+    border-color: #21c1ff;
+}
+
+.appinvoice .footer {
+    border-color: #21c1ff;
+}
+
+.initial-setup .navbar-header {
+    width: 100% !important;
+    text-align: center;
+    padding: 20px;
+}
+
+.initial-setup .navbar-header img {
+    width: 220px;
+}
+
+.initial-setup .infusionsoft-connect {
+    margin: 155px 0;
+    width: 100%;
+}
+
+.initial-setup .enter-code {
+    margin: 50px 0;
+}
+
+.initial-setup .navbar {
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 2px solid;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.initial-setup .primary-title {
+    text-align: center;
+}
+
+.initial-setup .primary-button {
+    width: 100%;
+}
+
+.initial-tools .navbar {
+    border-color: #fe8004;
+}
+
+.initial-docs .navbar {
+    border-color: #1ab95a;
+}
+
+.initial-invoices .navbar, .initial-account .navbar {
+    border-color: #21c1ff;
+}
+
+.fusesuite-register {
+    padding-bottom: 25px;
+}
+
+.fusesuite-register p {
+    padding: 0 !important;
+    margin-bottom: 25px;
+}
+
+.initial-docs .contentform .confirmfrm,
+.initial-invoices .contentform .confirmfrm,
+.initial-tools .contentform .confirmfrm {
+    background: transparent;
+}
+
+.initial-setup .col-lg-offset-3 {
+    margin-left: 25% !important;
+}
+.initial-setup .navigation {
+    float: right;
+}
+
+.error-page {
+    margin-top: 45px;
+}
+
+
+/* .initial-setup .content {
+    width: 500px;
+    margin: 0 auto;
+} */

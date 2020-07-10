@@ -1,0 +1,14 @@
+[24-Nov-2016 07:52:18 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 12
+[24-Nov-2016 07:52:22 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[12-Feb-2017 02:13:43 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 12
+[12-Feb-2017 02:13:45 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[03-May-2017 07:11:20 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 15
+[03-May-2017 07:11:21 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[09-Jun-2017 02:45:37 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[09-Jun-2017 02:45:38 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 16
+[22-Jul-2017 06:17:51 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 16
+[22-Jul-2017 06:17:52 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 16
+[22-Jul-2017 06:17:54 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[22-Jul-2017 06:18:02 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9
+[12-Oct-2017 01:06:04 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/AuthController.php on line 16
+[12-Oct-2017 01:06:09 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/fdtols/public_html/app/Http/Controllers/Auth/PasswordController.php on line 9

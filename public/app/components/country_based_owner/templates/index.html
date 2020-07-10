@@ -1,0 +1,180 @@
+
+<span>
+<div class="row allowner">
+    <div class="col-lg-7">
+        <table border="0" cellspacing="0" cellpadding="10" class="ownerTable infotable spacertwnty" >
+            <thead>
+                <tr bgcolor="#eeeeee">
+                    <th style="padding: 10px;">User</th>
+                    <th style="padding: 10px;">Saved Countries</th>
+                    <th style="padding: 10px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-if="country_owners.length <= 0 && isLoaded">
+                    <td colspan="4">No Country Based owner found.</td>
+                </tr>
+                <tr ng-if="country_owners.length <= 0 && !isLoaded">
+                    <td colspan="4"><span class="fa fa-spinner fa-spin"></span></td>
+                </tr>
+                <tr ng-repeat="country_owner in country_owners">
+                    <td style="background-color: #f8f8f8; padding:5px;"><% country_owner.owner_name %></td>
+                    <td style="background-color: #f8f8f8; padding:5px;"><% country_owner.readable_countries %></td>
+                    <td style="background-color: #f8f8f8; padding:5px;">
+                        <a href="javascript:void(0);" ng-click="editOwner(country_owner)">Edit</a> | <a href="javascript:void(0);" ng-click="deleteOwner(country_owner.id)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <section ng-if="fallback_owner.length > 0">
+                            <p style="margin: 0;">Fallback Owner: <b><% fallback_owner[0].fallback_owner_name %></b> <span><button class="btn btn-sm btn-primary" ng-click="showEditFallbackForm()"><i class="fa fa-edit"></i> Update</button></span></p>
+                        </section>
+                        <span ng-if="fallback_owner.length <= 0">
+                            <p style="margin: 0;">No Fallback Owner <span><button class="btn btn-sm btn-primary" ng-click="showFallbackForm()"><i class="fa fa-plus"></i> Add</button></span></p>
+                        </span>
+                    </td>
+                    <td><button class="btn btn-primary" ng-click="addNew()">Add New</button></td>
+                </tr> 
+            </tfoot>
+   
+        </table>           
+    </div>
+</div>
+
+
+<section id="add-fallback" style="display: none;">
+
+    <div class="row">
+        <div class="col-lg-5" ng-if="!isFallbackOwnerListLoaded">
+            <div class="alert alert-warning">
+                <p>
+                    <span class="fa fa-spinner fa-spin"></span>
+                    Currently getting owner lists... Please wait
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-5" ng-if="isFallbackOwnerListLoaded">
+            <div class="alert alert-success">
+                <p>
+                    <span class="fa fa-check"></span>
+                    Lists has been loaded successfully you may continue to add fallback owner.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <p><strong>Fallback Owner</strong></p> 
+            <select name="infscontact" class="infuscontact form-control" ng-model="fallback.fallback_owner_id">
+                <option ng-repeat="owner in fallback_owners" ng-value="owner.Id"><% owner.FirstName %> <% owner.LastName %></option>
+            </select>
+        </div>
+    </div>
+    
+    <br/>
+
+    <div class="row " ng-if="isFallbackOwnerListLoaded">
+        <div class="col-lg-5 text-right" ng-if="isFallbackOwnerEditing">
+            <button ng-show="isFallbackOwnerFormSubmitting" class="btn btn-primary"><span class="fa fa-spinner fa-spin"></span> Submitting...</button>
+            <button ng-show="!isFallbackOwnerFormSubmitting" class="btn btn-primary" ng-click="cancelEditingFallback()"><i class="fa fa-ban"></i> Cancel</button>
+            <button ng-show="!isFallbackOwnerFormSubmitting" class="btn btn-primary" ng-click="saveEditedFallbackOwner()"><i class="fa fa-save"></i> Save Edited Fallback Owner</button>
+        </div>
+        <div class="col-lg-5 text-right" ng-if="!isFallbackOwnerEditing">
+            <button ng-show="isFallbackOwnerFormSubmitting" class="btn btn-primary"><span class="fa fa-spinner fa-spin"></span> Submitting...</button>
+            <button ng-show="!isFallbackOwnerFormSubmitting" class="btn btn-primary" ng-click="cancelEditingFallback()"><i class="fa fa-ban"></i> Cancel</button>
+            <button ng-show="!isFallbackOwnerFormSubmitting" class="btn btn-primary" ng-click="saveFallbackOwner()"><i class="fa fa-save"></i> Save</button>
+        </div>
+
+    </div>
+
+    <br>
+        <div class="row">
+            <div class="col-lg-5"><hr></div>
+        </div>
+    <br>
+
+</section>
+
+
+<section id="add-new" style="display: none;">
+
+    <div class="row">
+        <div class="col-lg-5" ng-if="!isOwnerLoaded">
+            <div class="alert alert-warning">
+                <p>
+                    <span class="fa fa-spinner fa-spin"></span>
+                    Currently getting resources... Please wait
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-5" ng-if="isOwnerLoaded">
+            <div class="alert alert-success">
+                <p>
+                    <span class="fa fa-check"></span>
+                    Resources has been loaded successfully you may continue to add new groups.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <p><strong>New Country Based Owner Group</strong></p> 
+            <select name="infscontact" class="infuscontact form-control" ng-disabled="isEditing" ng-model="form.owner_id">
+                <option ng-repeat="owner in owners" ng-value="owner.Id"><% owner.FirstName %> <% owner.LastName %></option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row  martop">
+        <div class="col-lg-12">
+            <p><strong>New Countries</strong></p>
+        </div>
+    </div>
+    <div class="row marbottom">
+        <div class="col-lg-5">
+            <select class="country form-control" required name="countries[]" multiple="multiple" style="width: 100%;" ng-model="form.country_id">
+                <option ng-repeat="country in countries" ng-value="country.id"><% country.country_name %></option>
+            </select>
+        </div>
+    </div>
+    <div class='clearfix'></div> 
+
+    <br/>
+    <div class="row " ng-if="isOwnerLoaded">
+        <div class="col-lg-5 text-right" ng-if="isEditing">
+            <button ng-show="isFormSubmitting" class="btn btn-primary"><span class="fa fa-spinner fa-spin"></span> Submitting...</button>
+            <button ng-show="!isFormSubmitting" class="btn btn-primary" ng-click="saveEditedGroup()"><i class="fa fa-save"></i> Save Edited Group</button>
+            <button ng-show="!isFormSubmitting" class="btn btn-primary" ng-click="cancelEditing()"><i class="fa fa-ban"></i> Cancel</button>
+        </div>
+        <div class="col-lg-5 text-right" ng-if="!isEditing">
+            <button ng-show="isFormSubmitting" class="btn btn-primary"><span class="fa fa-spinner fa-spin"></span> Submitting...</button>
+            <button ng-show="!isFormSubmitting" class="btn btn-primary" ng-click="saveNewGroup()"><i class="fa fa-plus"></i> Save New Group</button>
+        </div>
+
+    </div>
+
+    <br>
+        <div class="row">
+            <div class="col-lg-5"><hr></div>
+        </div>
+    <br>
+</section>
+
+<div class="radiusmap" style="display:none;">
+            
+    <div class="col-md-12">
+        <h3>Your Radius</h3>
+        <div id="map" style="width: 560px; height: 350px;"></div>    
+    </div>
+    <div class="radiuslist col-md-12">
+        <h3>Your Postcode List</h3>
+        <div></div>
+    </div>
+</div>
+
